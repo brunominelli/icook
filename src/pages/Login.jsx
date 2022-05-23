@@ -1,6 +1,6 @@
 import React from 'react';
 import images from '../helpers/images';
-import { Anchor, Button, Container, Form, Input, Logo, Row, Wrapper } from '../styles';
+import {Anchor, Button, Container, Form, Input, Logo, Row, Wrapper } from '../styles';
 
 function Login() {
   return (
@@ -14,8 +14,8 @@ function Login() {
           <Input type='email' placeholder='Email' />
           <Input type='password' placeholder='Password' />
           <Row>
-            <Anchor>Forgot password</Anchor>
-            <Anchor>Register</Anchor>
+            <Anchor href='/forgot-password'>Forgot password</Anchor>
+            <Anchor href='/register'>Register</Anchor>
           </Row>
         </Form>
       <Button>Login</Button>
