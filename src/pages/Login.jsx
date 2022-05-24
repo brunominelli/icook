@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import images from '../helpers/images';
 import {Anchor, Button, Container, Form, Input, Logo, Row, Wrapper } from '../styles';
 
 function Login() {
   const [login, setLogin] = useState({ email: '', password: ''});
   const user = JSON.parse(localStorage.getItem('user'));
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!user) localStorage
@@ -18,6 +20,7 @@ function Login() {
     condition
     ? global.alert('Login realizado com sucesso')
     : global.alert('Email ou senha inválidos');
+    navigate('/recipes');
   }
 
   return (

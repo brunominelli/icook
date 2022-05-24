@@ -34,9 +34,42 @@ const Row = styled.div `
   width: 100%;
 `;
 
+const Header = styled.header `
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  width: 100vw;
+
+  & > img {
+    width: 7.5rem;
+    max-width: 10rem;
+  };
+
+  & > div > img {
+    margin: 0.5rem;
+    width: 2rem;
+  }
+`;
+
+const Footer = styled.footer `
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  width: 100vw;
+
+  & > img {
+    margin: 0.5rem;
+    width: 2rem;
+  }
+`;
+
 const Logo = styled.img `
-  width: 75%;
-  max-width: 20rem;
+  min-width: 10%;
+  max-width: 10rem;
 `;
 
 const Form = styled.form `
@@ -85,6 +118,8 @@ export {
   Container,
   Wrapper,
   Row,
+  Header,
+  Footer,
   Logo,
   Form,
   Input,
