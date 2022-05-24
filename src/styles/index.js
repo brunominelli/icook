@@ -73,6 +73,12 @@ const Button = styled.button `
   padding: 1rem 2rem;
   margin: 0.25rem 1rem;
   width: 100%;
+  transition: 1s;
+
+  &:disabled {
+    background-color: ${palette.primary};
+    color: ${palette.accent};
+  }
 `;
 
 export {

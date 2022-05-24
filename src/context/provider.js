@@ -5,8 +5,8 @@ import Context from './context';
 function Provider({ children }) {
   const [meals, setMeals] = useState([]);
   const [drinks, setDrinks] = useState([]);
+  const [user, setUser] = useState({ name: '', email: '', password: '' });
 
-  const user = { username: '', email: '', password: '' };
   const recipes = {
     id: '',
     type: '',
@@ -22,7 +22,6 @@ function Provider({ children }) {
   const setStorage = () => {
     localStorage.setItem('mealsToken', 1);
     localStorage.setItem('drinksToken', 1);
-    localStorage.setItem('user', JSON.stringify(user));
     localStorage.setItem('inProgressRecipes', []);
     localStorage.setItem('doneRecipes', JSON.stringify([recipes]));
     localStorage.setItem('favoriteRecipes', JSON.stringify([recipes]));
@@ -39,6 +38,8 @@ function Provider({ children }) {
   const contextValue = {
     meals,
     drinks,
+    user,
+    setUser,
   }
 
   return (
