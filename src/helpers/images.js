@@ -1,32 +1,51 @@
-import iCookLogoVertical from '../images/icook-logo-vertical.svg';
-import iCookLogoHorizontal from '../images/icook-logo-horizontal.svg';
-import loupeIcon from '../images/loupe-icon.svg';
-import menuIcon from '../images/menu-icon.svg';
+import iCookDarkLogoVertical from '../images/icook-logo-vertical.svg';
+import iCookDarkLogoHorizontal from '../images/icook-logo-horizontal.svg';
+import iconDarkLoupe from '../images/icon-loupe.svg';
+import iconDarkHeart from '../images/icon-dark-heart.svg';
+import iconDarkDrink from '../images/icon-drink.svg';
+import iconDarkExplore from '../images/icon-explore.svg';
+import iconDarkHome from '../images/icon-home.svg';
+import iconDarkMeal from '../images/icon-meal.svg';
+import iconDarkMenu from '../images/icon-menu.svg';
 
 const images = {
   logo: {
     vertical: {
-      src: iCookLogoVertical,
-      alt: 'Vertical iCook logo',
+      src: iCookDarkLogoVertical,
+      alt: 'Dark Vertical iCook logo',
     },
     horizontal: {
-      src: iCookLogoHorizontal,
-      alt: 'Horizontal iCook logo',
+      src: iCookDarkLogoHorizontal,
+      alt: 'Dark Horizontal iCook logo',
     },
   },
   loupe: {
-    src: loupeIcon,
-    alt: "Search loupe",
+    src: iconDarkLoupe,
+    alt: "Dark Search loupe",
   },
   menu: {
-    src: menuIcon,
-    alt: "Menu icon",
+    src: iconDarkMenu,
+    alt: "Dark Menu icon",
+  },
+  home: {
+    src: iconDarkHome,
+    alt: 'Dark Home icon',
   },
   heart: {
-    dark: {
-      src: '',
-      alt: '',
-    }
+    src: iconDarkHeart,
+    alt: 'Dark Heart icon',
+  },
+  drink: {
+    src: iconDarkDrink,
+    alt: 'Dark Drink icon',
+  },
+  meal: {
+    src: iconDarkMeal,
+    alt: 'Dark Meal icon',
+  },
+  explore: {
+    src: iconDarkExplore,
+    alt: 'Dark Explore icon',
   }
 };
 

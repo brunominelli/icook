@@ -59,6 +59,8 @@ const Footer = styled.footer `
   align-items: center;
   justify-content: space-between;
   padding: 1rem 0.5rem;
+  position: fixed;
+  bottom: 0;
   width: 100vw;
 
   & > img {
@@ -69,7 +71,7 @@ const Footer = styled.footer `
 
 const Logo = styled.img `
   min-width: 10%;
-  max-width: 10rem;
+  max-width: 100%;
 `;
 
 const Form = styled.form `
