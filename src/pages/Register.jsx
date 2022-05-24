@@ -8,7 +8,7 @@ import { Button, Container, Form, Input, Logo, Wrapper } from '../styles';
 function Register() {
   const [register, setRegister] = useState({ name: '', email: '', password: ''})
   const [disabled, setDisabled] = useState(true);
-  const { user, setUser } = useContext(Context);
+  const { setUser } = useContext(Context);
   const navigate = useNavigate();
 
   useEffect(() => {
