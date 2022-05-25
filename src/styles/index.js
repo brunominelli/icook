@@ -10,18 +10,31 @@ const Container = styled.main `
   height: 100vh;
 `;
 
-const Wrapper = styled.section `
+const Wrapper = styled.article `
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  background-color: ${palette.primary}
-  padding: 10rem;
-  margin: 0 auto;
-  width: 75vw;
+  margin: auto;
+  width: 90vw;
+
+  & > section {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  & > section > h1 {
+    font-size: 1.25rem;
+    text-align: center;
+    width: 100%;
+  }
 
   @media screen and (min-width: 576px) {
-    width: 30vw;
+    width: 75vw;
   };
 `;
 
@@ -39,6 +52,7 @@ const Header = styled.header `
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background-color: ${palette.secondary};
   padding: 1rem 0.5rem;
   width: 100vw;
 
@@ -58,6 +72,7 @@ const Footer = styled.footer `
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  background-color: ${palette.secondary};
   padding: 1rem 0.5rem;
   position: fixed;
   bottom: 0;
@@ -116,6 +131,21 @@ const Button = styled.button `
   }
 `;
 
+const Figure = styled.figure `
+  background-color: ${palette.secondary};
+  border-radius: 0.8rem;
+  box-shadow: 0.25rem 0.5rem 0.25rem ${palette.primary};
+  padding: 0.5rem;
+  margin: 0.5rem;
+  text-align: center;
+  width: 45%;
+
+  & > img {
+    border-radius: 0.8rem;
+    width: 100%;
+  }
+`;
+
 export {
   Container,
   Wrapper,
@@ -127,4 +157,5 @@ export {
   Input,
   Anchor,
   Button,
+  Figure,
 };
