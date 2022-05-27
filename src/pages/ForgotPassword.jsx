@@ -12,7 +12,7 @@ function ForgotPassword() {
         />
       <Form>
         <Input type='email' placeholder='Email' />
-        <Input type='password' placeholder='Password' />
+        <Input type='password' placeholder='New Password'/>
       </Form>
         <Button>Recover Password</Button>
       </Wrapper>

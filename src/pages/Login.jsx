@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import images from '../helpers/images';
 import {Anchor, Button, Container, Form, Input, Logo, Row, Wrapper } from '../styles';
 
@@ -11,16 +11,15 @@ function Login() {
   useEffect(() => {
     if (!user) localStorage
       .setItem('user', JSON.stringify({name: '', email: '', password: ''}));
-    console.log(user);
   }, [user])
 
   const handleLogin = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     const condition = (login.email === user.email) && (login.password === user.password);
-    condition
-    ? global.alert('Login realizado com sucesso')
-    : global.alert('Email ou senha inválidos');
-    navigate('/recipes');
+    if (condition) {
+      global.alert('Login realizado com sucesso');
+      navigate('/recipes');
+    } else global.alert('Email ou senha inválidos');
   }
 
   return (
@@ -44,8 +43,8 @@ function Login() {
             onChange={ (e) => setLogin({ ...login, password: e.target.value }) }
             />
           <Row>
-            <Anchor href='/forgot-password'>Forgot password</Anchor>
-            <Anchor href='/register'>Register</Anchor>
+            <Link to='/forgot-password'>Forgot password</Link>
+            <Link to='/register'>Register</Link>
           </Row>
         </Form>
       <Button onClick={() => handleLogin()}>Login</Button>

@@ -3,11 +3,11 @@ import AppFooter from '../components/AppFooter';
 import AppHeader from '../components/AppHeader';
 import AppCard from '../components/AppCard';
 import { Container, Wrapper } from '../styles';
-import { fetchMeals, fetchDrinks} from '../services/api';
+import { fetchMeals, fetchCocktails} from '../services/api';
 
 function Recipes() {
   const [meals, setMeals] = useState([]);
-  const [drinks, setDrinks] = useState([]);
+  const [cocktails, setCocktails] = useState([]);
 
   useEffect(() => {
     const getMeals = async () => {
@@ -15,13 +15,13 @@ function Recipes() {
       setMeals(recommendedMeals);
     }
 
-    const getDrinks = async () => {
-      const recommendedDrinks = await fetchDrinks('');
-      setDrinks(recommendedDrinks);
+    const getCocktails = async () => {
+      const recommendedCocktails = await fetchCocktails('');
+      setCocktails(recommendedCocktails);
     }
 
     getMeals();
-    getDrinks();
+    getCocktails();
 
   }, []);
 
@@ -41,8 +41,8 @@ function Recipes() {
               )}
             </section>
             <section>
-              <h1>Recommended Coctails</h1>
-              {drinks.map((drink) =>
+              <h1>Recommended Cocktails</h1>
+              {cocktails.map((drink) =>
                 <AppCard
                   key={ drink.idDrink }
                   recipeTitle={ drink.strDrink }

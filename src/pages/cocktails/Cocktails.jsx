@@ -1,12 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import AppCard from '../../components/AppCard';
 import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';
+import { fetchCocktails } from '../../services/api';
+import { Container, Wrapper } from '../../styles';
 
 function Cocktails() {
+  const [cocktails, setCocktails] = useState([]);
+
+  useEffect(() => {
+    const getCocktails = async () => {
+      const recommendedCocktails = await fetchCocktails('');
+      setCocktails(recommendedCocktails);
+    }
+    getCocktails();
+
+  }, []);
   return (
     <>
       <AppHeader />
-      <div>Cocktails</div>
+      <Container>
+        <Wrapper>
+          <section>
+            {cocktails.map((drink) =>
+              <AppCard
+                key={ drink.idDrink }
+                recipeTitle={ drink.strDrink }
+                recipeThumb={ drink.strDrinkThumb }
+              />
+            )}
+          </section>
+        </Wrapper>
+      </Container>
       <AppFooter />
     </>
   );
