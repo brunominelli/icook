@@ -1,11 +1,21 @@
 import React, { useState } from 'react';
-import { fetchDrinks, fetchMeals } from '../services/api';
+import { fetchCocktails, fetchMeals, fetchRandomCocktail, fetchRandomMeal } from '../services/api';
 import Context from './context';
 
 function Provider({ children }) {
   const [meals, setMeals] = useState([]);
   const [drinks, setDrinks] = useState([]);
   const [user, setUser] = useState({ name: '', email: '', password: '' });
+  const [recipe, getRecipe] = useState('');
+
+  const randomRecipe = async (type) => {
+    let recipe;
+    const meal = await fetchRandomMeal();
+    const cocktail = await fetchRandomCocktail();
+    if (type === 'meal') recipe = meal[0].idMeal;
+    if (type === 'cocktail') recipe = cocktail[0].idDrink;
+    getRecipe(recipe);
+  }
 
   const recipes = {
     id: '',
@@ -29,7 +39,7 @@ function Provider({ children }) {
 
   useState( async () => {
     const mealsAPI = await fetchMeals('');
-    const drinksAPI = await fetchDrinks('');
+    const drinksAPI = await fetchCocktails('');
     setMeals(mealsAPI);
     setDrinks(drinksAPI);
     setStorage();
@@ -40,6 +50,8 @@ function Provider({ children }) {
     drinks,
     user,
     setUser,
+    recipe,
+    randomRecipe,
   }
 
   return (
