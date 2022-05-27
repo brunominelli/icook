@@ -52,7 +52,7 @@ const Wrapper = styled.article `
   }
 
   @media screen and (min-width: 576px) {
-    width: 30vw;
+    width: 100vw;
   };
 `;
 
@@ -153,18 +153,37 @@ const Button = styled.button `
 const Figure = styled.figure `
   display: flex;
   flex-direction: column;
-  background-color: ${palette.secondary};
+  justify-content: space-between;
+  background-color: ${palette.accent};
+  border: 0.0625rem solid ${palette.accent};
+  color: ${palette.secondary};
   border-radius: 0.8rem;
-  box-shadow: 0.25rem 0.5rem 0.25rem ${palette.primary};
   padding: 0.5rem;
   margin: 0.25rem;
   text-align: center;
+  transition: 0.5s;
   width: 45%;
+
+  & > figcaption > h3 {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
 
   & > img {
     border-radius: 0.8rem;
     width: 100%;
   }
+
+  &:hover {
+    background-color: ${palette.primary};
+    border: 0.0625rem solid ${palette.primary};
+    color: ${palette.accent}
+  }
+
+  @media screen and (min-width: 576px) {
+    width: 18.75%;
+    min-height: 11rem;
+  };
 `;
 
 export {
