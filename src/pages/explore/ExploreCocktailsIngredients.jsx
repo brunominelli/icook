@@ -1,8 +1,14 @@
 import React from 'react';
+import AppFooter from '../../components/AppFooter';
+import AppHeader from '../../components/AppHeader';
 
 function ExploreCocktailsIngredients() {
   return (
-    <div>ExploreCocktailsIngredients</div>
+    <>
+      <AppHeader />
+      <div>ExploreCocktailsIngredients</div>
+      <AppFooter />
+    </>
   );
 };
 

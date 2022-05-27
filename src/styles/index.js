@@ -3,38 +3,56 @@ import styled from 'styled-components';
 
 const Container = styled.main `
   display: flex;
-  background-color: ${palette.secondary};
   align-items: center;
   justify-content: center;
+  background-color: ${palette.secondary};
+  margin: auto;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
 `;
 
 const Wrapper = styled.article `
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+  background-color: ${palette.secondary};
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  color: ${palette.accent};
   margin: auto;
   width: 90vw;
+
+  & > a {
+    margin: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: ${palette.accent};
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 50vw;
+  }
+
+  & > a > img {
+    width: 5rem;
+  }
 
   & > section {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-
-    margin: 1rem 0;
+    justify-content: space-evenly;
+    margin-bottom: 3.5rem;
     width: 100%;
   }
 
   & > section > h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     text-align: center;
+    margin-bottom: 2rem;
     width: 100%;
   }
 
   @media screen and (min-width: 576px) {
-    width: 75vw;
+    width: 30vw;
   };
 `;
 
@@ -45,15 +63,20 @@ const Row = styled.div `
   justify-content: space-evenly;
   margin: 0.5rem 0;
   width: 100%;
-`;
+  `;
 
+const Anchor = styled.a `
+  color: ${palette.accent};
+  text-decoration: underline;
+`;
+  
 const Header = styled.header `
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: ${palette.secondary};
-  padding: 1rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   width: 100vw;
 
   & > img {
@@ -61,9 +84,9 @@ const Header = styled.header `
     max-width: 10rem;
   };
 
-  & > div > img {
+  & > div > a > img {
     margin: 0.5rem;
-    width: 2rem;
+    width: 1.5rem;
   }
 `;
 
@@ -73,14 +96,14 @@ const Footer = styled.footer `
   align-items: center;
   justify-content: space-between;
   background-color: ${palette.secondary};
-  padding: 1rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   position: fixed;
   bottom: 0;
   width: 100vw;
 
-  & > img {
+  & > a > img {
     margin: 0.5rem;
-    width: 2rem;
+    width: 1.5rem;
   }
 `;
 
@@ -108,10 +131,6 @@ const Input = styled.input `
   width: 100%;
 `;
 
-const Anchor = styled.a `
-  color: ${palette.accent};
-  text-decoration: underline; 
-`;
 
 const Button = styled.button `
   background-color: ${palette.accent};
@@ -132,11 +151,13 @@ const Button = styled.button `
 `;
 
 const Figure = styled.figure `
+  display: flex;
+  flex-direction: column;
   background-color: ${palette.secondary};
   border-radius: 0.8rem;
   box-shadow: 0.25rem 0.5rem 0.25rem ${palette.primary};
   padding: 0.5rem;
-  margin: 0.5rem;
+  margin: 0.25rem;
   text-align: center;
   width: 45%;
 

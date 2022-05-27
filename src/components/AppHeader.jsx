@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '../styles';
 import images from '../helpers/images';
+import { Link } from 'react-router-dom';
 
 function AppHeader() {
   return (
@@ -10,8 +11,12 @@ function AppHeader() {
         alt={ images.logo.horizontal.alt }
       />
       <div>
-        <img src={images.loupe.src} alt={images.loupe.alt} />
-        <img src={images.menu.src} alt={images.menu.alt} />
+        <Link to='/recipes'>
+          <img src={images.loupe.src} alt={images.loupe.alt} />
+        </Link>
+        <Link to='/recipes'>
+          <img src={images.menu.src} alt={images.menu.alt} />
+        </Link>
       </div>
     </Header>
   );
