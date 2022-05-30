@@ -8,7 +8,7 @@ const Container = styled.main `
   background-color: ${palette.secondary};
   margin: auto;
   width: 100vw;
-  height: 90vh;
+  height: 83.75vh;
 `;
 
 const Wrapper = styled.article `
@@ -40,14 +40,17 @@ const Wrapper = styled.article `
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-evenly;
-    margin-bottom: 3.5rem;
+    margin-bottom: 3rem;
     width: 100%;
   }
 
-  & > section > h1 {
+  & > h1 {
+    border-top: 0.0625rem solid ${palette.accent};
+    border-bottom: 0.0625rem solid ${palette.accent};
     font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
     width: 100%;
   }
 
@@ -63,7 +66,21 @@ const Row = styled.div `
   justify-content: space-evenly;
   margin: 0.5rem 0;
   width: 100%;
-  `;
+
+  & > a {
+    margin: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: ${palette.accent};
+    font-size: 1.5rem;
+    font-weight: 700;
+    width: 50vw;
+  }
+
+  & > a > img {
+    width: 5rem;
+  }
+`;
 
 const Anchor = styled.a `
   color: ${palette.accent};
@@ -117,7 +134,7 @@ const Form = styled.form `
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%
+  width: 100%;
 `;
 
 const Input = styled.input `
@@ -128,7 +145,12 @@ const Input = styled.input `
   text-align: center;
   padding: 0.5rem 1rem;
   margin-bottom: 0.75rem;
+  transition: 1s;
   width: 100%;
+
+  &:disabled {
+    display: none;
+  }
 `;
 
 
@@ -162,7 +184,7 @@ const Figure = styled.figure `
   margin: 0.25rem;
   text-align: center;
   transition: 0.5s;
-  width: 45%;
+  width: 47.5%;
 
   & > figcaption > h3 {
     font-size: 1rem;
