@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import images from '../helpers/images';
-import {Anchor, Button, Container, Form, Input, Logo, Row, Wrapper } from '../styles';
+import { Button, Container, Form, Input, Logo, Row, Wrapper } from '../styles';
 
 function Login() {
   const [login, setLogin] = useState({ email: '', password: ''});
