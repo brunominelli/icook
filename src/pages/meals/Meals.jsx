@@ -22,8 +22,8 @@ function Meals() {
       <Container>
         <Wrapper>
           <section>
-            {meals.map((meal) =>
-              <AppCard
+            {meals.map((meal, index) =>
+              index < 24 && <AppCard
                 key={ meal.idMeal }
                 recipeTitle={ meal.strMeal }
                 recipeThumb={ meal.strMealThumb }

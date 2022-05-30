@@ -22,8 +22,8 @@ function Cocktails() {
       <Container>
         <Wrapper>
           <section>
-            {cocktails.map((drink) =>
-              <AppCard
+            {cocktails.map((drink, index) =>
+              index < 24 && <AppCard
                 key={ drink.idDrink }
                 recipeTitle={ drink.strDrink }
                 recipeThumb={ drink.strDrinkThumb }

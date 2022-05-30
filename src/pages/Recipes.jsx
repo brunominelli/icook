@@ -30,20 +30,20 @@ function Recipes() {
       <AppHeader />
         <Container>
           <Wrapper>
+            <h1>Recommended Meals</h1>
             <section>
-              <h1>Recommended Meals</h1>
-              {meals.map((meal) =>
-                <AppCard
+              {meals.map((meal, index) =>
+                index < 4 && <AppCard
                   key={ meal.idMeal }
                   recipeTitle={ meal.strMeal }
                   recipeThumb={ meal.strMealThumb }
                 />
               )}
             </section>
+            <h1>Recommended Cocktails</h1>
             <section>
-              <h1>Recommended Cocktails</h1>
-              {cocktails.map((drink) =>
-                <AppCard
+              {cocktails.map((drink, index) =>
+                index < 4 && <AppCard
                   key={ drink.idDrink }
                   recipeTitle={ drink.strDrink }
                   recipeThumb={ drink.strDrinkThumb }
