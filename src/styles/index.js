@@ -68,12 +68,10 @@ const Row = styled.div `
   width: 100%;
 
   & > a {
-    margin: 1rem;
+    margin: 0.25rem;
     text-align: center;
     text-decoration: none;
     color: ${palette.accent};
-    font-size: 1.5rem;
-    font-weight: 700;
     width: 50vw;
   }
 
@@ -153,7 +151,6 @@ const Input = styled.input `
   }
 `;
 
-
 const Button = styled.button `
   background-color: ${palette.accent};
   border: none;
@@ -208,6 +205,30 @@ const Figure = styled.figure `
   };
 `;
 
+const Recipe = styled.article `
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & > h1 {
+    border-top: 0.0625rem solid ${palette.accent};
+    border-bottom: 0.0625rem solid ${palette.accent};
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+    width: 50vh;
+  }
+
+  & > p {
+    line-height: 1.5;
+    text-indent: 1rem;
+    text-align: justify;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+`;
+
 export {
   Container,
   Wrapper,
@@ -220,4 +241,5 @@ export {
   Anchor,
   Button,
   Figure,
+  Recipe,
 };

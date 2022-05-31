@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ForgotPassword from '../pages/ForgotPassword';
 import Cocktails from '../pages/cocktails/Cocktails';
 import CocktailsDetails from '../pages/cocktails/CocktailsDetails';
@@ -19,7 +19,7 @@ import ExploreCocktailsIngredients from '../pages/explore/ExploreCocktailsIngred
 
 function Main() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/explore/meals/nacionalities' element={<ExploreMealsNacionalities />} />
         <Route path='/explore/meals/ingredients' element={<ExploreMealsIngredients />} />
@@ -38,7 +38,7 @@ function Main() {
         <Route path='/login' element={<Login />} />
         <Route exact path='/' element={<Home />} />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
