@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Figure } from '../styles';
+import { Card } from '../styles';
 import { useNavigate } from 'react-router-dom';
 
 function AppCard(props) {
@@ -8,12 +8,12 @@ function AppCard(props) {
   const navigate = useNavigate();
 
   return (
-    <Figure onClick={() => navigate(`/${recipeType}/${recipeId}`)}>
+    <Card onClick={() => navigate(`/${recipeType}/${recipeId}`)}>
       <img src={recipeThumb} alt={`${recipeTitle} thumbnail`} />
       <figcaption>
         <h3>{recipeTitle}</h3>
       </figcaption>
-    </Figure>
+    </Card>
   );
 };
 

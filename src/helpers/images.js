@@ -10,6 +10,7 @@ import iconMenu from '../images/icon-menu.svg';
 import iconIngredients from '../images/icon-ingredients.svg';
 import iconFlag from '../images/icon-flag.svg';
 import iconSurprise from '../images/icon-surprise.svg';
+import iconShare from '../images/icon-share.svg';
 
 const images = {
   logo: {
@@ -61,6 +62,10 @@ const images = {
   surprise: {
     src: iconSurprise,
     alt: 'Suprise-me icon',
+  },
+  share: {
+    src: iconShare,
+    alt: 'Share icon',
   },
 };
 
