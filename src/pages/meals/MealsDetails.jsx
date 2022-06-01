@@ -34,8 +34,6 @@ function MealsDetails() {
     getDetails();
   }, []);
 
-  console.log(instructions);
-
   return (
     <>
       <AppHeader />

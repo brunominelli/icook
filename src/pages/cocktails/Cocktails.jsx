@@ -3,7 +3,7 @@ import AppCard from '../../components/AppCard';
 import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';
 import { fetchCocktails } from '../../services/api';
-import { Container, Wrapper } from '../../styles';
+import { Block, Container, Wrapper } from '../../styles';
 
 function Cocktails() {
   const [cocktails, setCocktails] = useState([]);
@@ -21,7 +21,7 @@ function Cocktails() {
       <AppHeader />
       <Container>
         <Wrapper>
-          <section>
+          <Block>
             {cocktails.map((cocktail, index) =>
               index < 24 && <AppCard
                 key={ cocktail.idDrink }
@@ -31,7 +31,7 @@ function Cocktails() {
                 recipeType='cocktails'
               />
             )}
-          </section>
+          </Block>
         </Wrapper>
       </Container>
       <AppFooter />
