@@ -16,9 +16,12 @@ export const formatIngredients = (recipe) => {
 
   for (let index = 0; index < items.length; index += 1) {
     ingredients.push(`${measures[index]} ${items[index]}`);
-    console.log(ingredients[index]);
   }
-  console.log(ingredients[0], ingredients);
 
   return ingredients;
+};
+
+export const formatInstructions = (recipe) => {
+  const instructions = recipe.strInstructions.split('\r\n');
+  return instructions;
 };

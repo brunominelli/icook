@@ -5,9 +5,10 @@ import Context from './context';
 function Provider({ children }) {
   const [meals, setMeals] = useState([]);
   const [drinks, setDrinks] = useState([]);
-  const [user, setUser] = useState({ name: '', email: '', password: '' });
   const [recipe, setRecipe] = useState({});
   const [ingredients, setIngredients] = useState([]);
+  const [instructions, setInstructions] = useState([]);
+  const [user, setUser] = useState({ name: '', email: '', password: '' });
 
   const object = {
     id: '',
@@ -57,6 +58,8 @@ function Provider({ children }) {
     randomRecipe,
     ingredients,
     setIngredients,
+    instructions,
+    setInstructions,
   }
 
   return (
