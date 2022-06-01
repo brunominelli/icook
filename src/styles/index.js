@@ -8,7 +8,7 @@ const Container = styled.main `
   background-color: ${palette.secondary};
   margin: auto;
   width: 100vw;
-  height: 83.75vh;
+  height:100vh;
 `;
 
 const Wrapper = styled.article `
@@ -205,6 +205,7 @@ const Recipe = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 3rem;
   width: 50vh;
 
   & > p,
@@ -224,6 +225,7 @@ const Thumbnail = styled.figure `
   justify-content: space-evenly;
   
   & > img {
+    border-radius: 0.8rem;
     margin-bottom: 1rem;
     width: 100%;
   };
@@ -238,6 +240,7 @@ const Thumbnail = styled.figure `
 
   & > figcaption > ${Title} {
     border-bottom: none;
+    font-size: 2rem;
     margin: 0;
   }
 
