@@ -1,31 +1,40 @@
 import React, { useContext, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import AppHeader from '../../components/AppHeader';
+import AppFooter from '../../components/AppFooter';
 import Context from '../../context/context';
-import { formatIngredients } from '../../helpers/functions';
+import { formatIngredients, formatInstructions } from '../../helpers/functions';
 import images from '../../helpers/images';
 import { fetchMealsDetails } from '../../services/api';
 import { Container, Recipe, Row, Thumbnail, Title, Wrapper } from '../../styles';
 
 function MealsDetails() {
   const { id } = useParams();
-  const { recipe, setRecipe, ingredients, setIngredients } = useContext(Context);
+  const {
+    recipe,
+    setRecipe,
+    ingredients,
+    setIngredients,
+    instructions,
+    setInstructions
+  } = useContext(Context);
 
   useEffect(() => {
     const getDetails = async () => {
       const recipeDetails = await fetchMealsDetails(id);
       setRecipe(recipeDetails);
-
+      
       if (recipeDetails) {
         const recipeIngredients = formatIngredients(recipeDetails);
+        const recipeInstructions = formatInstructions(recipeDetails);
         setIngredients(recipeIngredients);
+        setInstructions(recipeInstructions);
       }
     };
     getDetails();
   }, []);
 
-  console.log(recipe);
-  console.log(ingredients);
+  console.log(instructions);
 
   return (
     <>
@@ -44,12 +53,19 @@ function MealsDetails() {
                 </figcaption>
               </Thumbnail>
               <Title>Ingredients</Title>
-              {ingredients.map((ingredient) => <li>{ingredient}</li>)}
+              {ingredients
+                .map((ingredient, index) =>
+                  <li key={ index }>{ingredient}</li>
+              )}
               <Title>Instructions</Title>
-              <p>{recipe.strInstructions}</p>
+              {instructions
+                .map((instruction, index) =>
+                  <p key={ index }>{ instruction }</p>
+              )}
             </Recipe>
           </Wrapper>
         </Container>
+      <AppFooter />
     </>
   );
 };
