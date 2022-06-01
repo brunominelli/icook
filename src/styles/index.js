@@ -45,7 +45,7 @@ const Block = styled.section `
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-evenly;
-  margin-bottom: 3rem;
+  margin-bottom: 3.75rem;
   width: 100%;
 `;
 
@@ -87,7 +87,7 @@ const Header = styled.header `
   align-items: center;
   justify-content: space-between;
   background-color: ${palette.secondary};
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   width: 100vw;
 
   & > img {
@@ -95,7 +95,7 @@ const Header = styled.header `
     max-width: 10rem;
   };
 
-  & > div > a > img {
+  & > div > img {
     margin: 0.5rem;
     width: 1.5rem;
   }
@@ -107,7 +107,7 @@ const Footer = styled.footer `
   align-items: center;
   justify-content: space-between;
   background-color: ${palette.secondary};
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem;
   position: fixed;
   bottom: 0;
   width: 100vw;
