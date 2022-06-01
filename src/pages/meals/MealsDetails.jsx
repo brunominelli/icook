@@ -5,7 +5,7 @@ import AppFooter from '../../components/AppFooter';
 import Context from '../../context/context';
 import { formatIngredients, formatInstructions } from '../../helpers/functions';
 import images from '../../helpers/images';
-import { fetchMealsDetails } from '../../services/api';
+import { fetchMealDetails } from '../../services/api';
 import { Container, Recipe, Row, Thumbnail, Title, Wrapper } from '../../styles';
 
 function MealsDetails() {
@@ -21,7 +21,7 @@ function MealsDetails() {
 
   useEffect(() => {
     const getDetails = async () => {
-      const recipeDetails = await fetchMealsDetails(id);
+      const recipeDetails = await fetchMealDetails(id);
       setRecipe(recipeDetails);
       
       if (recipeDetails) {

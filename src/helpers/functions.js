@@ -5,11 +5,11 @@ export const formatIngredients = (recipe) => {
   const ingredients = [];
 
   entries.forEach((entry) => {
-    if (entry[0].includes('strIngredient') && entry[1] !== "") {
+    if (entry[0].includes('strIngredient') && (entry[1] !== ""  && entry[1])) {
       items.push(entry[1]);
     }
 
-    if (entry[0].includes('strMeasure') && entry[1] !== " " && entry[1] !== "") {
+    if (entry[0].includes('strMeasure') && (entry[1] !== " " && entry[1] !== "" && entry[1])) {
       measures.push(entry[1]);
     }
   });

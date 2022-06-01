@@ -5,7 +5,7 @@ import AppHeader from '../../components/AppHeader';
 import Context from '../../context/context';
 import { formatIngredients, formatInstructions } from '../../helpers/functions';
 import images from '../../helpers/images';
-import { fetchMealsDetails } from '../../services/api';
+import { fetchCocktailDetails } from '../../services/api';
 import { Container, Recipe, Row, Thumbnail, Title, Wrapper } from '../../styles';
 
 function CocktailsDetails() {
@@ -21,7 +21,8 @@ function CocktailsDetails() {
 
   useEffect(() => {
     const getDetails = async () => {
-      const recipeDetails = await fetchMealsDetails(id);
+      const recipeDetails = await fetchCocktailDetails(id);
+      console.log(recipeDetails);
       setRecipe(recipeDetails);
       
       if (recipeDetails) {
@@ -41,9 +42,9 @@ function CocktailsDetails() {
         <Wrapper>
           <Recipe>
             <Thumbnail>
-              <img src={ recipe.strMealThumb } alt={ `${recipe.strMeal} Thumb` } />
+              <img src={ recipe.strDrinkThumb } alt={ `${recipe.strDrink} Thumb` } />
               <figcaption>
-                <Title>{ recipe.strMeal }</Title>
+                <Title>{ recipe.strDrink }</Title>
                 <Row>
                   <img src={ images.heart.src } alt={ images.heart.alt } />
                   <img src={ images.share.src } alt={ images.share.alt } />
@@ -51,15 +52,15 @@ function CocktailsDetails() {
               </figcaption>
             </Thumbnail>
             <Title>Ingredients</Title>
-              {ingredients
-                .map((ingredient, index) =>
-                  <li key={ index }>{ingredient}</li>
-              )}
-              <Title>Instructions</Title>
-              {instructions
-                .map((instruction, index) =>
-                  <p key={ index }>{ instruction }</p>
-              )}
+            {ingredients
+              .map((ingredient, index) =>
+                <li key={ index }>{ingredient}</li>
+            )}
+            <Title>Instructions</Title>
+            {instructions
+              .map((instruction, index) =>
+                <p key={ index }>{ instruction }</p>
+            )}
           </Recipe>
         </Wrapper>
       </Container>
