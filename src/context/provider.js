@@ -7,6 +7,7 @@ function Provider({ children }) {
   const [drinks, setDrinks] = useState([]);
   const [user, setUser] = useState({ name: '', email: '', password: '' });
   const [recipe, setRecipe] = useState({});
+  const [ingredients, setIngredients] = useState([]);
 
   const object = {
     id: '',
@@ -37,25 +38,6 @@ function Provider({ children }) {
     localStorage.setItem('favoriteRecipes', JSON.stringify([object]));
   }
 
-  const formatIngredients = () => {
-    const entries = Object.entries(recipe);
-    const items = [];
-    const measures = [];
-
-    entries.forEach((entry) => {
-      if (entry[0].includes('strIngredient') && entry[1] !== "") {
-        items.push(entry[1]);
-      }
-  
-      if (entry[0].includes('strMeasure') && entry[1] !== " " && entry[1] !== "") {
-        measures.push(entry[1]);
-      }
-    });
-
-    const ingredients = { items, measures };
-    return ingredients;
-  }
-
   useState( async () => {
     const mealsAPI = await fetchMeals('');
     const drinksAPI = await fetchCocktails('');
@@ -73,7 +55,8 @@ function Provider({ children }) {
     object,
     setRecipe,
     randomRecipe,
-    formatIngredients,
+    ingredients,
+    setIngredients,
   }
 
   return (
