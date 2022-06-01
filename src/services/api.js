@@ -12,7 +12,7 @@ const fetchMealCategories = async () => {
   return response.ok ? Promise.resolve(data.categories) : Promise.reject(data);
 };
 
-const fetchMealsDetails = async (id) => {
+const fetchMealDetails = async (id) => {
   const endpoint = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
   const response = await fetch(endpoint);
   const data = await response.json();
@@ -33,6 +33,13 @@ const fetchCocktails = async (query) => {
   return response.ok ? Promise.resolve(data.drinks) : Promise.reject(data);
 };
 
+const fetchCocktailDetails = async (id) => {
+  const endpoint = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
+  const response = await fetch(endpoint);
+  const data = await response.json();
+  return response.ok ? Promise.resolve(data.drinks[0]) : Promise.reject(data);
+};
+
 const fetchRandomCocktail = async () => {
   const endpoint = `https://www.thecocktaildb.com/api/json/v1/1/random.php`;
   const response = await fetch(endpoint);
@@ -43,8 +50,9 @@ const fetchRandomCocktail = async () => {
 export {
   fetchMeals,
   fetchMealCategories,
-  fetchMealsDetails,
+  fetchMealDetails,
   fetchRandomMeal,
   fetchCocktails,
+  fetchCocktailDetails,
   fetchRandomCocktail,
 };
