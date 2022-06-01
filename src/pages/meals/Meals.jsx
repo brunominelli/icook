@@ -3,7 +3,7 @@ import AppCard from '../../components/AppCard';
 import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';
 import { fetchMealCategories, fetchMeals } from '../../services/api';
-import { Container, Wrapper } from '../../styles';
+import { Block, Container, Wrapper } from '../../styles';
 
 function Meals() {
   const [meals, setMeals] = useState([]);
@@ -29,7 +29,7 @@ function Meals() {
       <AppHeader />
       <Container>
         <Wrapper>
-          <section>
+          <Block>
             {meals.map((meal, index) =>
               index < 24 && <AppCard
                 key={ meal.idMeal }
@@ -39,7 +39,7 @@ function Meals() {
                 recipeType='meals'
               />
             )}
-            </section>
+          </Block>
         </Wrapper>
       </Container>
       <AppFooter />

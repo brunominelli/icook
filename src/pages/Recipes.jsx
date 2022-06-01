@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AppFooter from '../components/AppFooter';
 import AppHeader from '../components/AppHeader';
 import AppCard from '../components/AppCard';
-import { Container, Wrapper } from '../styles';
+import { Block, Container, Title, Wrapper } from '../styles';
 import { fetchMeals, fetchCocktails} from '../services/api';
 
 function Recipes() {
@@ -30,26 +30,30 @@ function Recipes() {
       <AppHeader />
         <Container>
           <Wrapper>
-            <h1>Recommended Meals</h1>
-            <section>
+            <Title>Recommended Meals</Title>
+            <Block>
               {meals.map((meal, index) =>
                 index < 4 && <AppCard
-                  key={ meal.idMeal }
-                  recipeTitle={ meal.strMeal }
-                  recipeThumb={ meal.strMealThumb }
+                key={ meal.idMeal }
+                recipeId={ meal.idMeal }
+                recipeTitle={ meal.strMeal }
+                recipeThumb={ meal.strMealThumb }
+                recipeType='meals'
                 />
               )}
-            </section>
-            <h1>Recommended Cocktails</h1>
-            <section>
-              {cocktails.map((drink, index) =>
+            </Block>
+            <Title>Recommended Cocktails</Title>
+            <Block>
+              {cocktails.map((cocktail, index) =>
                 index < 4 && <AppCard
-                  key={ drink.idDrink }
-                  recipeTitle={ drink.strDrink }
-                  recipeThumb={ drink.strDrinkThumb }
+                key={ cocktail.idDrink }
+                recipeId={ cocktail.idDrink }
+                recipeTitle={ cocktail.strDrink }
+                recipeThumb={ cocktail.strDrinkThumb }
+                recipeType='cocktails'
                 />
               )}
-            </section>
+            </Block>
           </Wrapper>
         </Container>
       <AppFooter />

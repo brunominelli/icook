@@ -35,28 +35,29 @@ const Wrapper = styled.article `
     width: 5rem;
   }
 
-  & > section {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 3rem;
-    width: 100%;
-  }
-
-  & > h1 {
-    border-top: 0.0625rem solid ${palette.accent};
-    border-bottom: 0.0625rem solid ${palette.accent};
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 3rem;
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-
   @media screen and (min-width: 576px) {
     width: 100vw;
   };
+`;
+
+const Block = styled.section `
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3rem;
+  width: 100%;
+`;
+
+const Title = styled.h1 `
+  border-top: 0.0625rem solid ${palette.accent};
+  border-bottom: 0.0625rem solid ${palette.accent};
+  color: ${palette.primary};
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  margin-bottom: 1rem;
+  width: 100%;
 `;
 
 const Row = styled.div `
@@ -78,11 +79,6 @@ const Row = styled.div `
   & > a > img {
     width: 5rem;
   }
-`;
-
-const Anchor = styled.a `
-  color: ${palette.accent};
-  text-decoration: underline;
 `;
   
 const Header = styled.header `
@@ -169,13 +165,13 @@ const Button = styled.button `
   }
 `;
 
-const Figure = styled.figure `
+const Card = styled.figure `
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${palette.accent};
-  border: 0.0625rem solid ${palette.accent};
-  color: ${palette.secondary};
+  background-color: ${palette.primary};
+  border: 0.0625rem solid ${palette.primary};
+  color: ${palette.accent};
   border-radius: 0.8rem;
   padding: 0.5rem;
   margin: 0.25rem;
@@ -194,9 +190,9 @@ const Figure = styled.figure `
   }
 
   &:hover {
-    background-color: ${palette.primary};
-    border: 0.0625rem solid ${palette.primary};
-    color: ${palette.accent}
+    background-color: ${palette.accent};
+    border: 0.0625rem solid ${palette.accent};
+    color: ${palette.secondary}
   }
 
   @media screen and (min-width: 576px) {
@@ -205,22 +201,14 @@ const Figure = styled.figure `
   };
 `;
 
-const Recipe = styled.article `
+const Recipe = styled.div `
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 50vh;
 
-  & > h1 {
-    border-top: 0.0625rem solid ${palette.accent};
-    border-bottom: 0.0625rem solid ${palette.accent};
-    font-size: 1.5rem;
-    text-align: center;
-    line-height: 3rem;
-    margin-bottom: 1rem;
-    width: 50vh;
-  }
-
-  & > p {
+  & > p,
+  & > li {
     line-height: 1.5;
     text-indent: 1rem;
     text-align: justify;
@@ -229,17 +217,48 @@ const Recipe = styled.article `
   }
 `;
 
+const Thumbnail = styled.figure `
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  & > img {
+    margin-bottom: 1rem;
+    width: 100%;
+  };
+
+  & > figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  };
+
+  & > figcaption > ${Title} {
+    border-bottom: none;
+    margin: 0;
+  }
+
+  & > figcaption > ${Row} > img {
+    width: 2rem;
+  }
+`;
+
 export {
   Container,
   Wrapper,
+  Block,
+  Title,
   Row,
   Header,
   Footer,
   Logo,
   Form,
   Input,
-  Anchor,
   Button,
-  Figure,
+  Card,
   Recipe,
+  Thumbnail,
 };
