@@ -34,27 +34,27 @@ function ForgotPassword() {
           src={ images.logo.vertical.src }
           alt={ images.logo.vertical.alt }
         />
-      <Form>
-        <Input
-          type='email'
-          placeholder='Email'
-          onChange={ (e) => handleDisabled(e.target.value) }
-        />
-        <Input
-          type='password'
-          placeholder='New Password'
-          value={ recover.password }
-          onChange={ (e) => setRecover({...recover, password: e.target.value}) }
-          disabled={ disabled }
-        />
-      </Form>
-        <Button
-          type='button'
-          disabled={ disabled }
-          onClick={ () => handleRecoverClick(recover) }
-        >
-          Recover Password
-        </Button>
+        <Form>
+          <Input
+            type='email'
+            placeholder='Email'
+            onChange={ (e) => handleDisabled(e.target.value) }
+          />
+          <Input
+            type='password'
+            placeholder='New Password'
+            value={ recover.password }
+            onChange={ (e) => setRecover({...recover, password: e.target.value}) }
+            disabled={ disabled }
+          />
+          <Button
+            type='button'
+            disabled={ disabled }
+            onClick={ () => handleRecoverClick(recover) }
+          >
+            Recover Password
+          </Button>
+        </Form>
       </Wrapper>
     </Container>
   );

@@ -38,27 +38,27 @@ function Register() {
           src={ images.logo.vertical.src }
           alt={ images.logo.vertical.alt }
         />
-      <Form>
-        <Input
-          type='text'
-          placeholder='Name'
-          value={register.name}
-          onChange={ (e) => setRegister({...register, name: e.target.value })}
-        />
-        <Input
-          type='email'
-          placeholder='Email'
-          value={register.email}
-          onChange={ (e) => setRegister({...register, email: e.target.value })}
-        />
-        <Input
-          type='password'
-          placeholder='Password'
-          value={register.password}
-          onChange={ (e) => setRegister({...register, password: e.target.value })}
-        />
-      </Form>
-        <Button type='button' disabled={ disabled } onClick={ () => handleRegister()}>Register</Button>
+        <Form>
+          <Input
+            type='text'
+            placeholder='Name'
+            value={register.name}
+            onChange={ (e) => setRegister({...register, name: e.target.value })}
+          />
+          <Input
+            type='email'
+            placeholder='Email'
+            value={register.email}
+            onChange={ (e) => setRegister({...register, email: e.target.value })}
+          />
+          <Input
+            type='password'
+            placeholder='Password'
+            value={register.password}
+            onChange={ (e) => setRegister({...register, password: e.target.value })}
+          />
+          <Button type='button' disabled={ disabled } onClick={ () => handleRegister()}>Register</Button>
+        </Form>
       </Wrapper>
     </Container>
   )

@@ -46,8 +46,8 @@ function Login() {
             <Link to='/forgot-password'>Forgot password</Link>
             <Link to='/register'>Register</Link>
           </Row>
+          <Button onClick={() => handleLogin()}>Login</Button>
         </Form>
-      <Button onClick={() => handleLogin()}>Login</Button>
       </Wrapper>
     </Container>
   );
