@@ -21,6 +21,10 @@ function ExploreCocktails() {
               <img src={ images.ingredients.src } alt={ images.ingredients.alt }/>
               <p>Ingredients</p>
             </Link>
+            <Link to='/explore/cocktails/glasses'>
+              <img src={ images.cocktail.src } alt={ images.cocktail.alt }/>
+              <p>Glasses</p>
+            </Link>
             <Link to={`/cocktails/${recipe}`}>
               <img src={ images.surprise.src } alt={ images.surprise.alt }/>
               <p>Surprise-me!</p>
