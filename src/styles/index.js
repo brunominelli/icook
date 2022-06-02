@@ -7,8 +7,9 @@ const Container = styled.main `
   justify-content: center;
   background-color: ${palette.secondary};
   margin: auto;
-  width: 100vw;
-  height:100vh;
+  width: 90vw;
+  height: 33.5rem;
+  max-height: 100vh;
 `;
 
 const Wrapper = styled.article `
@@ -20,6 +21,15 @@ const Wrapper = styled.article `
   color: ${palette.accent};
   margin: auto;
   width: 90vw;
+`;
+
+const Block = styled.section `
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 3.75rem;
+  width: 100%;
 
   & > a {
     margin: 1rem;
@@ -34,19 +44,6 @@ const Wrapper = styled.article `
   & > a > img {
     width: 5rem;
   }
-
-  @media screen and (min-width: 576px) {
-    width: 100vw;
-  };
-`;
-
-const Block = styled.section `
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-bottom: 3.75rem;
-  width: 100%;
 `;
 
 const Title = styled.h1 `
@@ -87,17 +84,17 @@ const Header = styled.header `
   align-items: center;
   justify-content: space-between;
   background-color: ${palette.secondary};
-  padding: 0.25rem;
+  padding: 0.25rem 0.75rem;
   width: 100vw;
 
   & > img {
     width: 7.5rem;
-    max-width: 10rem;
+    max-width: 20rem;
   };
 
   & > div > img {
     margin: 0.5rem;
-    width: 1.5rem;
+    width: 2rem;
   }
 `;
 
@@ -107,20 +104,21 @@ const Footer = styled.footer `
   align-items: center;
   justify-content: space-between;
   background-color: ${palette.secondary};
-  padding: 0.25rem;
+  padding: 0.25rem 0.75rem;
   position: fixed;
   bottom: 0;
   width: 100vw;
 
   & > a > img {
     margin: 0.5rem;
-    width: 1.5rem;
+    width: 2rem;
   }
 `;
 
 const Logo = styled.img `
   min-width: 10%;
-  max-width: 100%;
+  max-width: 70%;
+  margin: 2rem;
 `;
 
 const Form = styled.form `
@@ -178,6 +176,7 @@ const Card = styled.figure `
   text-align: center;
   transition: 0.5s;
   width: 47.5%;
+  height: 13.125rem;
 
   & > figcaption > h3 {
     font-size: 1rem;
