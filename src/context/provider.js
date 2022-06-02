@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { fetchCocktails, fetchMeals, fetchRandomCocktail, fetchRandomMeal } from '../services/api';
+import { fetchCocktailLists, fetchCocktails, fetchMealLists, fetchMeals, fetchRandomCocktail, fetchRandomMeal } from '../services/api';
 import Context from './context';
 
 function Provider({ children }) {
   const [meals, setMeals] = useState([]);
+  const [mealsIngredients, setMealsIngredients] = useState([]);
   const [drinks, setDrinks] = useState([]);
+  const [drinksIngredients, setDrinksIngredients] = useState([]);
   const [recipe, setRecipe] = useState({});
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
@@ -40,16 +42,22 @@ function Provider({ children }) {
   }
 
   useState( async () => {
-    const mealsAPI = await fetchMeals('');
-    const drinksAPI = await fetchCocktails('');
-    setMeals(mealsAPI);
-    setDrinks(drinksAPI);
+    const meals = await fetchMeals('');
+    const mealsIngredients = await fetchMealLists('i');
+    const drinks = await fetchCocktails('');
+    const drinksIngredients = await fetchCocktailLists('i');
+    setMeals(meals);
+    setMealsIngredients(mealsIngredients);
+    setDrinks(drinks);
+    setDrinksIngredients(drinksIngredients)
     setStorage();
   }, [])
 
   const contextValue = {
     meals,
+    mealsIngredients,
     drinks,
+    drinksIngredients,
     user,
     setUser,
     recipe,

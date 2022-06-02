@@ -22,7 +22,6 @@ function CocktailsDetails() {
   useEffect(() => {
     const getDetails = async () => {
       const recipeDetails = await fetchCocktailDetails(id);
-      console.log(recipeDetails);
       setRecipe(recipeDetails);
       
       if (recipeDetails) {

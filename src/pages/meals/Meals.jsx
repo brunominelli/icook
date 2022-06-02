@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import AppCard from '../../components/AppCard';
 import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';
-import { fetchMealCategories, fetchMeals } from '../../services/api';
+import { fetchMealLists, fetchMeals } from '../../services/api';
 import { Block, Container, Wrapper } from '../../styles';
 
 function Meals() {
@@ -16,7 +16,7 @@ function Meals() {
     };
 
     const getCategories = async () => {
-      const mealsCategories = await fetchMealCategories();
+      const mealsCategories = await fetchMealLists('c');
       setCategories(mealsCategories);
     };
     getMeals();
