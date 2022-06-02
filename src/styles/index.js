@@ -7,9 +7,7 @@ const Container = styled.main `
   justify-content: center;
   background-color: ${palette.secondary};
   margin: auto;
-  width: 90vw;
-  height: 33.5rem;
-  max-height: 100vh;
+  width: 100vw;
 `;
 
 const Wrapper = styled.article `
@@ -19,8 +17,9 @@ const Wrapper = styled.article `
   align-items: center;
   justify-content: center;
   color: ${palette.accent};
-  margin: auto;
-  width: 90vw;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 100vw;
 `;
 
 const Block = styled.section `
@@ -126,7 +125,7 @@ const Form = styled.form `
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 85vw;
 `;
 
 const Input = styled.input `
@@ -175,7 +174,7 @@ const Card = styled.figure `
   margin: 0.25rem;
   text-align: center;
   transition: 0.5s;
-  width: 47.5%;
+  width: 9.75rem;
   height: 13.125rem;
 
   & > figcaption > h3 {
