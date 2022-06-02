@@ -4,7 +4,7 @@ import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';
 import Context from '../../context/context';
 import images from '../../helpers/images';
-import { Container, Wrapper } from '../../styles';
+import { Block, Container, Wrapper } from '../../styles';
 
 function ExploreMeals() {
   const { recipe, randomRecipe } = useContext(Context);
@@ -16,18 +16,20 @@ function ExploreMeals() {
       <AppHeader />
       <Container>
         <Wrapper>
-          <Link to='/explore/meals/ingredients'>
-            <img src={ images.ingredients.src } alt={ images.ingredients.alt }/>
-            <p>Ingredients</p>
-          </Link>
-          <Link to='/explore/meals/nacionalities'>
-            <img src={ images.flag.src } alt={ images.flag.alt }/>
-            <p>Nacionalities</p>
-          </Link>
-          <Link to={`/meals/${recipe}`}>
-            <img src={ images.surprise.src } alt={ images.surprise.alt }/>
-            <p>Surprise-me!</p>
-          </Link>
+          <Block>
+            <Link to='/explore/meals/ingredients'>
+              <img src={ images.ingredients.src } alt={ images.ingredients.alt }/>
+              <p>Ingredients</p>
+            </Link>
+            <Link to='/explore/meals/nacionalities'>
+              <img src={ images.flag.src } alt={ images.flag.alt }/>
+              <p>Nacionalities</p>
+            </Link>
+            <Link to={`/meals/${recipe}`}>
+              <img src={ images.surprise.src } alt={ images.surprise.alt }/>
+              <p>Surprise-me!</p>
+            </Link>
+          </Block>
         </Wrapper>
       </Container>
       <AppFooter />

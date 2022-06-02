@@ -4,7 +4,7 @@ import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';
 import Context from '../../context/context';
 import images from '../../helpers/images';
-import { Container, Wrapper } from '../../styles';
+import { Block, Container, Wrapper } from '../../styles';
 
 function ExploreCocktails() {
   const { recipe, randomRecipe } = useContext(Context);
@@ -16,14 +16,16 @@ function ExploreCocktails() {
       <AppHeader />
       <Container>
         <Wrapper>
-          <Link to='/explore/cocktails/ingredients'>
-            <img src={ images.ingredients.src } alt={ images.ingredients.alt }/>
-            <p>Ingredients</p>
-          </Link>
-          <Link to={`/cocktails/${recipe}`}>
-            <img src={ images.surprise.src } alt={ images.surprise.alt }/>
-            <p>Surprise-me!</p>
-          </Link>
+          <Block>
+            <Link to='/explore/cocktails/ingredients'>
+              <img src={ images.ingredients.src } alt={ images.ingredients.alt }/>
+              <p>Ingredients</p>
+            </Link>
+            <Link to={`/cocktails/${recipe}`}>
+              <img src={ images.surprise.src } alt={ images.surprise.alt }/>
+              <p>Surprise-me!</p>
+            </Link>
+          </Block>
         </Wrapper>
       </Container>
       <AppFooter />
