@@ -8,7 +8,6 @@ function Provider({ children }) {
   const [mealsNacionalities, setMealsNacionalities] = useState([]);
   const [drinks, setDrinks] = useState([]);
   const [drinksIngredients, setDrinksIngredients] = useState([]);
-  const [drinksGlasses, setDrinksGlasses] = useState([]);
   const [recipe, setRecipe] = useState({});
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
@@ -49,13 +48,11 @@ function Provider({ children }) {
     const mealsNacionalities = await fetchMealLists('a');
     const drinks = await fetchCocktails('');
     const drinksIngredients = await fetchCocktailLists('i');
-    const drinksGlasses = await fetchCocktailLists('g');
     setMeals(meals);
     setMealsIngredients(mealsIngredients);
     setMealsNacionalities(mealsNacionalities);
     setDrinks(drinks);
     setDrinksIngredients(drinksIngredients)
-    setDrinksGlasses(drinksGlasses);
     setStorage();
   }, [])
 
@@ -65,7 +62,6 @@ function Provider({ children }) {
     mealsNacionalities,
     drinks,
     drinksIngredients,
-    drinksGlasses,
     user,
     setUser,
     recipe,
