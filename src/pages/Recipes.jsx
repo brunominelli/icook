@@ -35,10 +35,10 @@ function Recipes() {
               {meals.map((meal, index) =>
                 index < 4 && <AppCard
                 key={ meal.idMeal }
-                recipeId={ meal.idMeal }
-                recipeTitle={ meal.strMeal }
-                recipeThumb={ meal.strMealThumb }
-                recipeType='meals'
+                id={ meal.idMeal }
+                title={ meal.strMeal }
+                thumb={ meal.strMealThumb }
+                type='meals'
                 />
               )}
             </Block>
@@ -47,10 +47,10 @@ function Recipes() {
               {cocktails.map((cocktail, index) =>
                 index < 4 && <AppCard
                 key={ cocktail.idDrink }
-                recipeId={ cocktail.idDrink }
-                recipeTitle={ cocktail.strDrink }
-                recipeThumb={ cocktail.strDrinkThumb }
-                recipeType='cocktails'
+                id={ cocktail.idDrink }
+                title={ cocktail.strDrink }
+                thumb={ cocktail.strDrinkThumb }
+                type='cocktails'
                 />
               )}
             </Block>

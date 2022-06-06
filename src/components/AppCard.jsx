@@ -4,16 +4,16 @@ import { Card } from '../styles';
 import { useNavigate } from 'react-router-dom';
 
 function AppCard(props) {
-  const { recipeId, recipeTitle, recipeThumb, recipeType } = props;
+  const { id, title, thumb, type } = props;
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    switch (recipeType) {
+    switch (type) {
       case 'meals':
-        navigate(`/${recipeType}/${recipeId}`);
+        navigate(`/${type}/${id}`);
         break;
       case 'cocktails':
-        navigate(`/${recipeType}/${recipeId}`);
+        navigate(`/${type}/${id}`);
         break;
       case 'ingredient':
         break;
@@ -26,9 +26,9 @@ function AppCard(props) {
 
   return (
     <Card onClick={() => handleNavigate()}>
-      <img src={recipeThumb} alt={`${recipeTitle} thumbnail`} />
+      <img src={thumb} alt={`${title} thumbnail`} />
       <figcaption>
-        <h3>{recipeTitle}</h3>
+        <h3>{title}</h3>
       </figcaption>
     </Card>
   );

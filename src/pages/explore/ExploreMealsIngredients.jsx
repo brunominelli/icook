@@ -17,10 +17,10 @@ function ExploreMealsIngredients() {
           {mealsIngredients.map((ingredient, index) =>
             index < 24 && <AppCard
             key={+ingredient.idIngredient}
-            recipeId={+ingredient.idIngredient}
-            recipeTitle={ingredient.strIngredient}
-            recipeThumb={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`}
-            recipeType='ingredient'
+            id={+ingredient.idIngredient}
+            title={ingredient.strIngredient}
+            thumb={`https://www.themealdb.com/images/ingredients/${ingredient.strIngredient}.png`}
+            type='ingredient'
             />
           )}
         </Block>

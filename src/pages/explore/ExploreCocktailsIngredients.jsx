@@ -17,10 +17,10 @@ function ExploreCocktailsIngredients() {
           {drinksIngredients.map((ingredient, index) =>
             index < 24 && <AppCard
             key={index}
-            recipeId={index}
-            recipeTitle={ingredient.strIngredient1}
-            recipeThumb={`https://www.thecocktaildb.com/images/ingredients/${ingredient.strIngredient1}.png`}
-            recipeType='ingredient'
+            id={index}
+            title={ingredient.strIngredient1}
+            thumb={`https://www.thecocktaildb.com/images/ingredients/${ingredient.strIngredient1}.png`}
+            type='ingredient'
             />
           )}
           </Block>

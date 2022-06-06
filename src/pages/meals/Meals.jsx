@@ -33,10 +33,10 @@ function Meals() {
             {meals.map((meal, index) =>
               index < 24 && <AppCard
                 key={ meal.idMeal }
-                recipeId={ meal.idMeal }
-                recipeTitle={ meal.strMeal }
-                recipeThumb={ meal.strMealThumb }
-                recipeType='meals'
+                id={ meal.idMeal }
+                title={ meal.strMeal }
+                thumb={ meal.strMealThumb }
+                type='meals'
               />
             )}
           </Block>

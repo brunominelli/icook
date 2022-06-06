@@ -25,10 +25,10 @@ function Cocktails() {
             {cocktails.map((cocktail, index) =>
               index < 24 && <AppCard
                 key={ cocktail.idDrink }
-                recipeId={ cocktail.idDrink }
-                recipeTitle={ cocktail.strDrink }
-                recipeThumb={ cocktail.strDrinkThumb }
-                recipeType='cocktails'
+                id={ cocktail.idDrink }
+                title={ cocktail.strDrink }
+                thumb={ cocktail.strDrinkThumb }
+                type='cocktails'
               />
             )}
           </Block>
