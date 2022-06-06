@@ -16,14 +16,16 @@ import ExploreMealsIngredients from '../pages/explore/ExploreMealsIngredients';
 import ExploreMealsNacionalities from '../pages/explore/ExploreMealsNacionalities';
 import ExploreCocktails from '../pages/explore/ExploreCocktails';
 import ExploreCocktailsIngredients from '../pages/explore/ExploreCocktailsIngredients';
+import ExploreCocktailsGlasses from '../pages/explore/ExploreCocktailsGlasses';
 
-function Main() {
+function AppMain() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/explore/meals/nacionalities' element={<ExploreMealsNacionalities />} />
         <Route path='/explore/meals/ingredients' element={<ExploreMealsIngredients />} />
         <Route path='/explore/meals' element={<ExploreMeals />} />
+        <Route path='/explore/cocktails/glasses' element={<ExploreCocktailsGlasses />} />
         <Route path='/explore/cocktails/ingredients' element={<ExploreCocktailsIngredients />} />
         <Route path='/explore/cocktails' element={<ExploreCocktails />} />
         <Route path='/explore' element={<Explore />} />
@@ -42,4 +44,4 @@ function Main() {
   );
 };
 
-export default Main;
+export default AppMain;
