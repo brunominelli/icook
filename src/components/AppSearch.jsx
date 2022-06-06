@@ -1,8 +1,49 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Block, Container, Input, SearchBar, Wrapper } from '../styles';
+import AppHeader from './AppHeader';
+import AppFooter from './AppFooter';
+import { fetchCocktails, fetchMeals } from '../services/api';
+import AppCard from './AppCard';
 
 function AppSearch() {
+  const [query, setQuery] = useState('');
+  const [search, setSearch] = useState([]);
+
+  useEffect(() => {
+    const getSearch = async () => {
+      const meals = await fetchMeals(query);
+      const cocktails = await fetchCocktails(query);
+      setSearch([...meals, ...cocktails]);
+    }
+    getSearch();
+  }, [query]);
+
+  console.log(search);
+
   return (
-    <div>AppSearch</div>
+    <>
+      <AppHeader />
+      <Container>
+        <Wrapper>
+          <Block>
+            <SearchBar>
+              <Input
+                type='text'
+                placeholder="Search by name or ingredient"
+                value={ query }
+                onChange={ (e) => setQuery(e.target.value)}
+              />
+            </SearchBar>
+            <Block>
+              {
+        
+              }
+            </Block>
+          </Block>
+        </Wrapper>
+      </Container>
+      <AppFooter />
+    </>
   );
 };
 

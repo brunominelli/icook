@@ -76,43 +76,6 @@ const Row = styled.div `
     width: 5rem;
   }
 `;
-  
-const Header = styled.header `
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: ${palette.secondary};
-  padding: 0.25rem 0.75rem;
-  width: 100vw;
-
-  & > img {
-    width: 7.5rem;
-    max-width: 20rem;
-  };
-
-  & > div > img {
-    margin: 0.5rem;
-    width: 2rem;
-  }
-`;
-
-const Footer = styled.footer `
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  background-color: ${palette.secondary};
-  padding: 0.25rem 0.75rem;
-  position: fixed;
-  bottom: 0;
-  width: 100vw;
-
-  & > a > img {
-    margin: 0.5rem;
-    width: 2rem;
-  }
-`;
 
 const Logo = styled.img `
   min-width: 10%;
@@ -259,14 +222,53 @@ const Thumbnail = styled.figure `
   }
 `;
 
+const SearchBar = styled.form `
+  width: 100%
+`;
+
+const Header = styled.header `
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  background-color: ${palette.secondary};
+  padding: 0.25rem 0.75rem;
+  width: 100vw;
+
+  & > img {
+    width: 7.5rem;
+    max-width: 20rem;
+  };
+
+  & > div > img {
+    margin: 0.5rem;
+    width: 2rem;
+  }
+`;
+
+const Footer = styled.footer `
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: ${palette.secondary};
+  padding: 0.25rem 0.75rem;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+
+  & > a > img {
+    margin: 0.5rem;
+    width: 2rem;
+  }
+`;
+
 export {
   Container,
   Wrapper,
   Block,
   Title,
   Row,
-  Header,
-  Footer,
   Logo,
   Form,
   Input,
@@ -275,4 +277,7 @@ export {
   Card,
   Recipe,
   Thumbnail,
+  SearchBar,
+  Header,
+  Footer,
 };

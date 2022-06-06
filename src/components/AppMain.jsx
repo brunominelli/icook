@@ -17,6 +17,7 @@ import ExploreMealsNacionalities from '../pages/explore/ExploreMealsNacionalitie
 import ExploreCocktails from '../pages/explore/ExploreCocktails';
 import ExploreCocktailsIngredients from '../pages/explore/ExploreCocktailsIngredients';
 import ExploreCocktailsGlasses from '../pages/explore/ExploreCocktailsGlasses';
+import AppSearch from './AppSearch';
 
 function AppMain() {
   return (
@@ -34,6 +35,7 @@ function AppMain() {
         <Route path='/cocktails' element={<Cocktails />} />
         <Route path='/meals/:id' element={<MealsDetails />} />
         <Route path='/meals' element={<Meals />} />
+        <Route path='/search' element={<AppSearch />} />
         <Route path='/recipes' element={<Recipes />} />
         <Route path='/forgot-password' element={<ForgotPassword />} />
         <Route path='/register' element={<Register />} />
