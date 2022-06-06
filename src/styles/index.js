@@ -144,6 +144,19 @@ const Input = styled.input `
   }
 `;
 
+const Select = styled.select `
+  background-color: ${palette.secondary};
+  border: 0.0625rem solid ${palette.accent};
+  border-radius: 0.25rem;
+  color: ${palette.accent};
+  font-size: 1rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.75rem;
+  transition: 1s;
+  width: 100%;
+`;
+
 const Button = styled.button `
   background-color: ${palette.accent};
   border: none;
@@ -174,7 +187,7 @@ const Card = styled.figure `
   margin: 0.25rem;
   text-align: center;
   transition: 0.5s;
-  width: 9.75rem;
+  width: 9.5rem;
   height: 13.125rem;
 
   & > figcaption > h3 {
@@ -194,7 +207,6 @@ const Card = styled.figure `
   }
 
   @media screen and (min-width: 576px) {
-    width: 18.75%;
     min-height: 11rem;
   };
 `;
@@ -258,6 +270,7 @@ export {
   Logo,
   Form,
   Input,
+  Select,
   Button,
   Card,
   Recipe,

@@ -1,8 +1,8 @@
-import Main from "./components/Main";
+import AppMain from "./components/AppMain";
 
 function App() {
   return (
-    <Main />
+    <AppMain />
   );
 }
 

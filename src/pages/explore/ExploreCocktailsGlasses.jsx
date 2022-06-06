@@ -5,34 +5,34 @@ import AppHeader from '../../components/AppHeader';
 import Context from '../../context/context';
 import { Block, Container, Form, Select, Wrapper } from '../../styles';
 
-function ExploreMealsNacionalities() {
-  const { meals, mealsNacionalities } = useContext(Context);
-
+function ExploreCocktailsGlasses() {
+  const { drinks, drinksGlasses } = useContext(Context);
+  console.log(drinksGlasses);
   return (
-    <>
+      <>
       <AppHeader />
       <Container>
         <Wrapper>
-          <Form>
+        <Form>
             <Select>
               <option value=''>All</option>
-              {mealsNacionalities.map((nacionaty, index) =>
+              {drinksGlasses.map((glass, index) =>
                 <option
                   key={index}
-                  value={nacionaty.strArea}>
-                    {nacionaty.strArea}
+                  value={glass.strGlass}>
+                    {glass.strGlass}
                 </option>
               )}
             </Select>
           </Form>
           <Block>
-            {meals.map((meal, index) =>
+            {drinks.map((drink, index) =>
               index < 24 && <AppCard
-                key={ meal.idMeal }
-                id={ meal.idMeal }
-                title={ meal.strMeal }
-                thumb={ meal.strMealThumb }
-                type='meals'
+                key={ drink.idDrink }
+                id={ drink.idDrink }
+                title={ drink.strDrink }
+                thumb={ drink.strDrinkThumb }
+                type='drinks'
               />
             )}
           </Block>
@@ -43,4 +43,4 @@ function ExploreMealsNacionalities() {
   );
 };
 
-export default ExploreMealsNacionalities;
+export default ExploreCocktailsGlasses;
