@@ -6,7 +6,7 @@ import Context from '../../context/context';
 import { Block, Container, Wrapper } from '../../styles';
 
 function ExploreCocktailsIngredients() {
-  const { drinksIngredients } = useContext(Context);
+  const { cocktailsIngredients } = useContext(Context);
 
   return (
     <>
@@ -14,7 +14,7 @@ function ExploreCocktailsIngredients() {
       <Container>
         <Wrapper>
           <Block>
-          {drinksIngredients.map((ingredient, index) =>
+          {cocktailsIngredients.map((ingredient, index) =>
             index < 24 && <AppCard
             key={index}
             id={index}

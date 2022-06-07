@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import AppCard from '../../components/AppCard';
 import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';

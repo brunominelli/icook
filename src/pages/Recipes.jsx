@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import AppFooter from '../components/AppFooter';
 import AppHeader from '../components/AppHeader';
 import AppCard from '../components/AppCard';
 import { Block, Container, Title, Wrapper } from '../styles';
-import { fetchMeals, fetchCocktails} from '../services/api';
 import Context from '../context/context';
 
 function Recipes() {
