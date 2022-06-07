@@ -94,6 +94,7 @@ const Form = styled.form `
 const Input = styled.input `
   border: 0.0625rem solid ${palette.accent};
   border-radius: 0.25rem;
+  background-color: ${palette.secondary};
   color: ${palette.accent};
   font-size: 1rem;
   text-align: center;
@@ -141,21 +142,22 @@ const Button = styled.button `
 const Card = styled.figure `
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   background-color: ${palette.primary};
   border: 0.0625rem solid ${palette.primary};
   color: ${palette.accent};
   border-radius: 0.8rem;
-  padding: 0.5rem;
-  margin: 0.25rem;
+  padding: 1rem;
+  margin: 1rem;
   text-align: center;
   transition: 0.5s;
-  width: 9.5rem;
-  height: 13.125rem;
+  width: 100%;
 
   & > figcaption > h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin: auto;
     padding: 0.5rem;
+    width: 100%;
   }
 
   & > img {
@@ -235,12 +237,25 @@ const Header = styled.header `
   padding: 0.25rem 0.75rem;
   width: 100vw;
 
-  & > img {
+  & section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 85vw;
+  }
+
+  & section > img {
     width: 7.5rem;
     max-width: 20rem;
   };
 
-  & > div > img {
+  & section > div {
+    margin: none;
+    width: fit-content;
+  }
+
+  & section > div > img {
     margin: 0.5rem;
     width: 2rem;
   }
