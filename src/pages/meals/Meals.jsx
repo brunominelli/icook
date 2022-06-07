@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import AppCard from '../../components/AppCard';
 import AppFooter from '../../components/AppFooter';
 import AppHeader from '../../components/AppHeader';
-import { fetchMealLists, fetchMeals } from '../../services/api';
+import Context from '../../context/context';
 import { Block, Container, Wrapper } from '../../styles';
 
 function Meals() {
-  const [meals, setMeals] = useState([]);
-  const [categories, setCategories] = useState([])
-
-  useEffect(() => {
-    const getMeals = async () => {
-      const recommendedMeals = await fetchMeals('');
-      setMeals(recommendedMeals);
-    };
-
-    const getCategories = async () => {
-      const mealsCategories = await fetchMealLists('c');
-      setCategories(mealsCategories);
-    };
-    getMeals();
-    getCategories();
-    
-  }, []);
-  
+  const { meals } = useContext(Context);
+ 
   return (
     <>
       <AppHeader />

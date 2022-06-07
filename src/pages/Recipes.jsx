@@ -1,29 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import AppFooter from '../components/AppFooter';
 import AppHeader from '../components/AppHeader';
 import AppCard from '../components/AppCard';
 import { Block, Container, Title, Wrapper } from '../styles';
 import { fetchMeals, fetchCocktails} from '../services/api';
+import Context from '../context/context';
 
 function Recipes() {
-  const [meals, setMeals] = useState([]);
-  const [cocktails, setCocktails] = useState([]);
-
-  useEffect(() => {
-    const getMeals = async () => {
-      const recommendedMeals = await fetchMeals('');
-      setMeals(recommendedMeals);
-    }
-
-    const getCocktails = async () => {
-      const recommendedCocktails = await fetchCocktails('');
-      setCocktails(recommendedCocktails);
-    }
-
-    getMeals();
-    getCocktails();
-
-  }, []);
+  const { meals, cocktails } = useContext(Context);
 
   return (
     <>

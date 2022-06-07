@@ -6,9 +6,9 @@ function Provider({ children }) {
   const [meals, setMeals] = useState([]);
   const [mealsIngredients, setMealsIngredients] = useState([]);
   const [mealsNacionalities, setMealsNacionalities] = useState([]);
-  const [drinks, setDrinks] = useState([]);
-  const [drinksIngredients, setDrinksIngredients] = useState([]);
-  const [drinksGlasses, setDrinksGlasses] = useState([]);
+  const [cocktails, setCocktails] = useState([]);
+  const [cocktailsIngredients, setCocktailsIngredients] = useState([]);
+  const [cocktailsGlasses, setCocktailsGlasses] = useState([]);
   const [recipe, setRecipe] = useState({});
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
@@ -37,7 +37,7 @@ function Provider({ children }) {
 
   const setStorage = () => {
     localStorage.setItem('mealsToken', 1);
-    localStorage.setItem('drinksToken', 1);
+    localStorage.setItem('cocktailsToken', 1);
     localStorage.setItem('inProgressRecipes', []);
     localStorage.setItem('doneRecipes', JSON.stringify([object]));
     localStorage.setItem('favoriteRecipes', JSON.stringify([object]));
@@ -47,15 +47,15 @@ function Provider({ children }) {
     const meals = await fetchMeals('');
     const mealsIngredients = await fetchMealLists('i');
     const mealsNacionalities = await fetchMealLists('a');
-    const drinks = await fetchCocktails('');
-    const drinksIngredients = await fetchCocktailLists('i');
-    const drinksGlasses = await fetchCocktailLists('g');
+    const cocktails = await fetchCocktails('');
+    const cocktailsIngredients = await fetchCocktailLists('i');
+    const cocktailsGlasses = await fetchCocktailLists('g');
     setMeals(meals);
     setMealsIngredients(mealsIngredients);
     setMealsNacionalities(mealsNacionalities);
-    setDrinks(drinks);
-    setDrinksIngredients(drinksIngredients)
-    setDrinksGlasses(drinksGlasses);
+    setCocktails(cocktails);
+    setCocktailsIngredients(cocktailsIngredients)
+    setCocktailsGlasses(cocktailsGlasses);
     setStorage();
   }, [])
 
@@ -63,9 +63,9 @@ function Provider({ children }) {
     meals,
     mealsIngredients,
     mealsNacionalities,
-    drinks,
-    drinksIngredients,
-    drinksGlasses,
+    cocktails,
+    cocktailsIngredients,
+    cocktailsGlasses,
     user,
     setUser,
     recipe,
