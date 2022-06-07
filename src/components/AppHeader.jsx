@@ -8,18 +8,20 @@ function AppHeader() {
 
   return (
     <Header>
-      <img
-        src={ images.logo.horizontal.src }
-        alt={ images.logo.horizontal.alt }
-      />
-      <div>
+      <section>
         <img
-          src={images.loupe.src}
-          alt={images.loupe.alt}
-          onClick={ () => navigate('/search')}
+          src={ images.logo.horizontal.src }
+          alt={ images.logo.horizontal.alt }
         />
-        <img src={images.menu.src} alt={images.menu.alt} />
-      </div>
+        <div>
+          <img
+            src={images.loupe.src}
+            alt={images.loupe.alt}
+            onClick={ () => navigate('/search')}
+          />
+          <img src={images.menu.src} alt={images.menu.alt} />
+        </div>
+      </section>
     </Header>
   );
 };

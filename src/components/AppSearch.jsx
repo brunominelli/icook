@@ -18,8 +18,6 @@ function AppSearch() {
     getSearch();
   }, [query]);
 
-  console.log(search);
-
   return (
     <>
       <AppHeader />
@@ -29,15 +27,20 @@ function AppSearch() {
             <SearchBar>
               <Input
                 type='text'
-                placeholder="Search by name or ingredient"
+                placeholder="Search by recipe"
                 value={ query }
                 onChange={ (e) => setQuery(e.target.value)}
               />
             </SearchBar>
             <Block>
-              {
-        
-              }
+              {query && search.map((item) =>
+                <AppCard
+                  id={ item.idMeal || item.idDrink }
+                  title={ item.strMeal || item.strDrink}
+                  thumb={ item.strMealThumb || item.strDrinkThumb }
+                  type={ (item.idMeal && 'meals') || (item.idDrink && 'cocktails') }
+                />
+              )}
             </Block>
           </Block>
         </Wrapper>

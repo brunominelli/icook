@@ -7,7 +7,7 @@ import { Block, Container, Wrapper } from '../../styles';
 
 function ExploreMealsIngredients() {
   const { mealsIngredients } = useContext(Context);
-
+  
   return (
   <>
     <AppHeader />
