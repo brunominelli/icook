@@ -68,7 +68,7 @@ const fetchCocktailLists = async (query) => {
   const response = await fetch(endpoint);
   const data = await response.json();
   return response.ok ? Promise.resolve(data.drinks) : Promise.reject(data);
-};
+}; 
 
 const fetchCocktailDetails = async (id) => {
   const endpoint = `https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`;
