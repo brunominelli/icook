@@ -9,7 +9,7 @@ import { Block, Container, Wrapper } from '../../styles';
 function ExploreMeals() {
   const { recipe, randomRecipe } = useContext(Context);
 
-  useEffect(() => { randomRecipe('meal') }, []);
+  useEffect(() => { randomRecipe('meal') });
 
   return (
     <>
@@ -17,10 +17,6 @@ function ExploreMeals() {
       <Container>
         <Wrapper>
           <Block>
-            <Link to='/explore/meals/ingredients'>
-              <img src={ images.ingredients.src } alt={ images.ingredients.alt }/>
-              <p>Ingredients</p>
-            </Link>
             <Link to='/explore/meals/nacionalities'>
               <img src={ images.flag.src } alt={ images.flag.alt }/>
               <p>Nacionalities</p>

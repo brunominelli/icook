@@ -4,9 +4,8 @@ import AppHeader from '../../components/AppHeader';
 import AppFooter from '../../components/AppFooter';
 import Context from '../../context/context';
 import { formatIngredients, formatInstructions } from '../../helpers/functions';
-import images from '../../helpers/images';
 import { fetchMealDetails } from '../../services/api';
-import { Container, Recipe, Row, Thumbnail, Title, Wrapper } from '../../styles';
+import { Container, Recipe, Thumbnail, Title, Wrapper } from '../../styles';
 
 function MealsDetails() {
   const { id } = useParams();
@@ -32,7 +31,7 @@ function MealsDetails() {
       }
     };
     getDetails();
-  }, []);
+  });
 
   return (
     <>
@@ -44,10 +43,6 @@ function MealsDetails() {
                 <img src={ recipe.strMealThumb } alt={ `${recipe.strMeal} Thumb` } />
                 <figcaption>
                   <Title>{ recipe.strMeal }</Title>
-                  <Row>
-                    <img src={ images.heart.src } alt={ images.heart.alt } />
-                    <img src={ images.share.src } alt={ images.share.alt } />
-                  </Row>
                 </figcaption>
               </Thumbnail>
               <Title>Ingredients</Title>

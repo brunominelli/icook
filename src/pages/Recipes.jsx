@@ -13,8 +13,8 @@ function Recipes() {
       <AppHeader />
         <Container>
           <Wrapper>
-            <Title>Recommended Meals</Title>
             <Block>
+              <Title>Recommended Recipes</Title>
               {meals.map((meal, index) =>
                 index < 4 && <AppCard
                 key={ meal.idMeal }
@@ -24,9 +24,6 @@ function Recipes() {
                 type='meals'
                 />
               )}
-            </Block>
-            <Title>Recommended Cocktails</Title>
-            <Block>
               {cocktails.map((cocktail, index) =>
                 index < 4 && <AppCard
                 key={ cocktail.idDrink }

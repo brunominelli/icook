@@ -8,6 +8,12 @@ const Container = styled.main `
   background-color: ${palette.secondary};
   margin: auto;
   width: 100vw;
+
+  @media screen and (min-width: 756px) {
+    width: 40vw;
+    margin: 0;
+    height: max-content;
+  }
 `;
 
 const Wrapper = styled.article `
@@ -20,6 +26,10 @@ const Wrapper = styled.article `
   margin: 0.5rem;
   padding: 0.5rem;
   width: 100vw;
+
+  @media screen and (min-width: 756px) {
+    width: 40vw;
+  }
 `;
 
 const Block = styled.section `
@@ -43,6 +53,10 @@ const Block = styled.section `
   & > a > img {
     width: 5rem;
   }
+
+  @media screen and (min-width: 756px) {
+    margin: 3.75rem auto;
+  }  
 `;
 
 const Title = styled.h1 `
@@ -88,7 +102,7 @@ const Form = styled.form `
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 85vw;
+  width: 100%;
 `;
 
 const Input = styled.input `
@@ -172,16 +186,17 @@ const Card = styled.figure `
   }
 
   @media screen and (min-width: 576px) {
+    width: 40%;
     min-height: 11rem;
   };
 `;
 
-const Recipe = styled.div `
+const Recipe = styled.section `
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 3rem;
-  width: 50vh;
+  padding: 1rem;
+  margin-bottom: 3.75rem;
 
   & > p,
   & > li {
@@ -190,6 +205,10 @@ const Recipe = styled.div `
     text-align: justify;
     font-weight: 600;
     margin-bottom: 0.5rem;
+  }
+
+  @media screen and (min-width: 756px) {
+    margin: 3.75rem auto;
   }
 `;
 
@@ -221,6 +240,12 @@ const Thumbnail = styled.figure `
 
   & > figcaption > ${Row} > img {
     width: 2rem;
+  }
+
+  @media screen and (min-width: 756px) {
+    & > img {
+      width: 75%;
+    };
   }
 `;
 
@@ -259,6 +284,12 @@ const Header = styled.header `
     margin: 0.5rem;
     width: 2rem;
   }
+
+  @media screen and (min-width: 756px) {
+    position: fixed;
+    top: 0; 
+    width: 40vw;
+  }
 `;
 
 const Footer = styled.footer `
@@ -275,6 +306,10 @@ const Footer = styled.footer `
   & > a > img {
     margin: 0.5rem;
     width: 2rem;
+  }
+
+  @media screen and (min-width: 756px) {
+    width: 40vw;
   }
 `;
 

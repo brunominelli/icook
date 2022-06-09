@@ -15,10 +15,6 @@ function AppCard(props) {
       case 'cocktails':
         navigate(`/${type}/${id}`);
         break;
-      case 'ingredient':
-        break;
-      case 'nacionality':
-        break;
       default:
         break;
     }

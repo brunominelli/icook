@@ -16,14 +16,8 @@ function Provider({ children }) {
 
   const object = {
     id: '',
-    type: '',
-    nationality: '',
-    category: '',
-    alcoholicOrNot: '',
     name: '',
     image: '',
-    doneDate: '',
-    tags: '',
   };
 
   const randomRecipe = async (type) => {
@@ -38,8 +32,6 @@ function Provider({ children }) {
   const setStorage = () => {
     localStorage.setItem('mealsToken', 1);
     localStorage.setItem('cocktailsToken', 1);
-    localStorage.setItem('inProgressRecipes', []);
-    localStorage.setItem('doneRecipes', JSON.stringify([object]));
     localStorage.setItem('favoriteRecipes', JSON.stringify([object]));
   }
 

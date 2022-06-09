@@ -12,6 +12,7 @@ function AppHeader() {
         <img
           src={ images.logo.horizontal.src }
           alt={ images.logo.horizontal.alt }
+          onClick={ () => navigate('/') }
         />
         <div>
           <img
@@ -19,7 +20,6 @@ function AppHeader() {
             alt={images.loupe.alt}
             onClick={ () => navigate('/search')}
           />
-          <img src={images.menu.src} alt={images.menu.alt} />
         </div>
       </section>
     </Header>

@@ -14,7 +14,6 @@ const fetchMeals = async (query, searchBy) => {
       endpoint = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
       break;
   }
-
   const response = await fetch(endpoint);
   const data = await response.json();
   return response.ok ? Promise.resolve(data.meals) : Promise.reject(data);
@@ -57,7 +56,6 @@ const fetchCocktails = async (query, searchBy) => {
       endpoint = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`;
       break;
   }
-
   const response = await fetch(endpoint);
   const data = await response.json();
   return response.ok ? Promise.resolve(data.drinks) : Promise.reject(data);
