@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/icook/static/css/main.f50364fe.css",
+    "main.js": "/icook/static/js/main.a953ff22.js",
+    "static/js/787.7d656971.chunk.js": "/icook/static/js/787.7d656971.chunk.js",
+    "static/media/icon-surprise.svg": "/icook/static/media/icon-surprise.62a2f9ee39c205f1d0d94dbea9307ec9.svg",
+    "static/media/icook-logo-horizontal.svg": "/icook/static/media/icook-logo-horizontal.7b12b02db7c07039ba2b752c7f4013b4.svg",
+    "static/media/icook-logo-vertical.svg": "/icook/static/media/icook-logo-vertical.0103468d887f86325dd88c9646519b63.svg",
+    "static/media/icon-ingredients.svg": "/icook/static/media/icon-ingredients.baf98522bb44c66c984a1c3c3b26a6b5.svg",
+    "static/media/icon-meal.svg": "/icook/static/media/icon-meal.3283006df90f1b55b524832793811471.svg",
+    "static/media/icon-cocktail.svg": "/icook/static/media/icon-cocktail.42b45d7f4f8739367f708f68d3d3ccff.svg",
+    "static/media/icon-menu.svg": "/icook/static/media/icon-menu.c5a2ae5b3a67f1b6bf931f1f583db93d.svg",
+    "static/media/icon-flag.svg": "/icook/static/media/icon-flag.21f7fb22c15b51300649004131a12f9a.svg",
+    "static/media/icon-loupe.svg": "/icook/static/media/icon-loupe.3173e0aac03fae456bfc27964f28607a.svg",
+    "static/media/icon-home.svg": "/icook/static/media/icon-home.b8b713c92d421939adf3678727f98d8c.svg",
+    "static/media/icon-explore.svg": "/icook/static/media/icon-explore.ecebc85c970ce47f631f93dd746dd0a1.svg",
+    "index.html": "/icook/index.html",
+    "main.f50364fe.css.map": "/icook/static/css/main.f50364fe.css.map",
+    "main.a953ff22.js.map": "/icook/static/js/main.a953ff22.js.map",
+    "787.7d656971.chunk.js.map": "/icook/static/js/787.7d656971.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f50364fe.css",
+    "static/js/main.a953ff22.js"
+  ]
+}
