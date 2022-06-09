@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Cocktails from '../pages/cocktails/Cocktails';
 import CocktailsDetails from '../pages/cocktails/CocktailsDetails';
 import Explore from '../pages/explore/Explore';
@@ -14,7 +14,7 @@ import AppSearch from './AppSearch';
 
 function AppMain() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/explore/meals/nacionalities' element={<ExploreMealsNacionalities />} />
         <Route path='/explore/meals' element={<ExploreMeals />} />
@@ -28,7 +28,7 @@ function AppMain() {
         <Route path='/search' element={<AppSearch />} />
         <Route exact path='/' element={<Recipes />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
